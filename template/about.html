@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <title>About page</title>
+</head>
+<body>
+    <h1>About page</h1>
+    {% include 'menu.html' %}
+    <br>
+<img width="500" src="{% static 'nameste.jpg' %}"/>
+<img width="500" src="{% static 'yasu.jpg' %}"/>
+</body>
+</html>
