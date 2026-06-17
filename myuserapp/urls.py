@@ -7,5 +7,7 @@ urlpatterns = [
     path('home',views.homepageview),
     path('about',views.aboutpageview),
     path('contact',views.contactpageview),
-    path('hello',views.hello)
+    path('hello',views.hello),
+    path('shop',views.shop),
+    path('contactprocess',views.contactprocess)
 ]

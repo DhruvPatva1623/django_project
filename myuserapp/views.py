@@ -14,5 +14,13 @@ def contactpageview(request):
 
 def hello(request):
     return render(request, "hello.html")
-
+def shop(request):
+    return render(request,"shop.html")
+def contactprocess(request):
+    a = int(request.POST[ 'txt1' ])
+    b = int(request.POST[ 'txt2' ])
+    c = a + b
+    msg = " a = ",a," b = ",b," sum =",c 
+    
+    return HttpResponse(msg)
 # Create your views here.

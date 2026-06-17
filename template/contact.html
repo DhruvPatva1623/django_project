@@ -7,7 +7,14 @@
 </head>
 <body>
     <h1>Sampark page</h1>
-    {% include 'menu.html' %}
+  
+    <form method="POST" action="/contactprocess">
+        {% csrf_token %}
+        No1 : <input   width="230px" type="number" min="1" max="100" name="txt1" placeholder="enter no. 1" required autocomplete="off"/>
+        
+        No2 : <input type="number" min="1" max="100" name="txt2" placeholder="enter no. 2" required autocomplete="off"/>
+        <input type="submit"/>
+    </form>
 
 </body>
 </html>
