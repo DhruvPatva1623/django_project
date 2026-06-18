@@ -9,5 +9,9 @@ urlpatterns = [
     path('contact',views.contactpageview),
     path('hello',views.hello),
     path('shop',views.shop),
-    path('contactprocess',views.contactprocess)
+    path('contactprocess',views.contactprocess),
+    # path('markprocess')
+    path('saveSession',views.saveSessionData),
+    path('getSessionData',views.getSessionData)
+
 ]
