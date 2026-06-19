@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 align="center">Login Page</h1>
+    <form method="post" action="/loginprocess">
+        {% csrf_token %} 
+        name : <input type="text" name="name" required autocomplete="off"/><p>
+        
+        email  : <input type="email" name="email" required autocomplete="off"/><p>
+        
+        Password : <input type="password" name="password" required autocomplete="off"/>
+        <p> 
+        <input type="submit"/>
+        <p>
+        {% include 'menu.html' %}
+        
+    </form>
+</body>
+</html>

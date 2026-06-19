@@ -9,9 +9,20 @@ urlpatterns = [
     path('contact',views.contactpageview),
     path('hello',views.hello),
     path('shop',views.shop),
+
     path('contactprocess',views.contactprocess),
     # path('markprocess')
     path('saveSession',views.saveSessionData),
-    path('getSessionData',views.getSessionData)
+    path('getSessionData',views.getSessionData),
+    path('getSessionData1',views.getSessionData1),
+    path('removedSession',views.deleteSessionData1),
 
+    path('login',views.loginpage),
+    path('loginprocess',views.loginprocess),
+    path('dashboard',views.dashboard),
+    path('logout',views.logout),
+
+    path('mailsenddemo',views.mailsenddemo),
+    path('dynamicmail',views.dynamicmailpage),
+    path('mailProcess',views.dynamicmailprocess)
 ]
