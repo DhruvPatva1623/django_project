@@ -24,5 +24,10 @@ urlpatterns = [
 
     path('mailsenddemo',views.mailsenddemo),
     path('dynamicmail',views.dynamicmailpage),
-    path('mailProcess',views.dynamicmailprocess)
+    path('mailProcess',views.dynamicmailprocess),
+
+    path('addstudent',views.addstudentform),
+    path('studentprocess',views.studentprocess),
+  #  path('StudentLogin',views.student_login_mail)
+
 ]

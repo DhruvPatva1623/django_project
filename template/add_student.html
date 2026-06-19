@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,18 @@
 
 </head>
 <body>
-    <form method="post" action="/add_studentprocess">
-        name : <input 
+    <form method="post" action="/studentprocess">
+        <h1>Student Login Page</h1>
+        {% csrf_token %}
+        name : <input type="text" name="txt1"/><p>
+        email : <input type="text" name="txt2"/><p>
+        number : <input type="text" name="txt3"/><p>    
+        address : <input type="text" name="txt4"/><p>
+        </p>
+        <input type="submit"/><p></p>
+
+        {% include 'menu.html' %}
     </form>
     
 </body>
-</html> -->
+</html>

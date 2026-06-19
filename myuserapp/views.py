@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect #added redirect for login and dashb
 from django.http import HttpResponse 
 from django.core.mail import send_mail #day4 for mail
 from django.conf import settings #day4 for mail
-
+from . models import student #day 5
 # Create your views here.
 
 def homepageview(request):
@@ -98,7 +98,7 @@ def mailsenddemo(request):
     subject = 'Mail is Sent by The Messi'
     message = 'Iss baar bhi FIFA World Cup jeetegne wala hai!'
     email_from = settings.EMAIL_HOST_USER
-    recipient_list = ['s@gmail.com']  #aalways remove before pushing to git also from setting 
+    recipient_list = ['5@gmail.com']  #aalways remove before pushing to git also from setting 
     send_mail( subject, message, email_from, recipient_list) 
     return HttpResponse("Mail Dekh Lijiye Bhaiya! manual mail sent")
 
@@ -112,3 +112,35 @@ def dynamicmailprocess(request):
     recipient_list = [request.POST.get('to'),]  #aalways remove before pushing to git also from setting 
     send_mail( subject, message, email_from, recipient_list) 
     return HttpResponse("Dynamically Mail Sent!")
+
+#day 5
+
+def addstudentform(request):
+    return render(request,'add_student.html')
+
+def studentprocess(request):
+    txt1 = request.POST['txt1']
+    txt2 = request.POST['txt2']
+    txt3 = request.POST['txt3']
+    txt4 = request.POST['txt4']
+    # #mail goes to admin
+    # student.objects.create(name=txt1,email=txt2,number=txt3,address=txt4)
+    # mymsg = "User try to logged in.",txt1,"email",txt2,"number",txt3,"address",txt4
+    # subject = "Contact us from website"
+    # email_from =settings.EMAIL_HOST_USER
+    # message = mymsg
+    # recipient_list = ['5@gmail.com']
+    # send_mail( subject, message, email_from, recipient_list)
+
+    # #mail goes to user
+    # student.objects.create(name=txt1,email=txt2,number=txt3,address=txt4)
+    # mymsg = "successfully logged in!",txt1,"email",txt2,"number",txt3,"address",txt4
+    # subject = "Tried to log in website"
+    # email_from =settings.EMAIL_HOST_USER
+    # message = mymsg
+    # recipient_list = [txt2]
+    # send_mail(subject, message, email_from, recipient_list)
+    return HttpResponse("Thank you")
+    
+
+
