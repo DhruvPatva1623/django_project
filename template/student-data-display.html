@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+</head>
+<body>
+    <h1>Student Data Display</h1>
+    <p>This is a simple student data display page.</p>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>Address</th>
+        </tr>
+        {% for i in students %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.address}}</td>
+            <td><a href="delete-student/{{i.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p></p>
+    {% include 'menu.html' %}
+</body>
+</html>

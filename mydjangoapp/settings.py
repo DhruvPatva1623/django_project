@@ -131,4 +131,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = '@gmail.com' #aalways remove before pushing to git also from views.py
-EMAIL_HOST_PASSWORD = 'f' #aalways remove before pushing to git 
+EMAIL_HOST_PASSWORD = '' #aalways remove before pushing to git also from setting 
+
+
+SESSION_COOKIE_AGE = 1800
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
